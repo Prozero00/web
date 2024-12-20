@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: lightgreen;
+            text-align: center;
+            padding: 20px;
+            height: 10vh;
+        }
+
+        .main {
+            grid-area: main;
+            display: flex;
+            gap: 10px;
+        }
+
+        .main>div {
+            flex: 1;
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            height: 10vh;
+        }
+
+        .footer {
+            grid-area: footer;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            height: 5vh;
+        }
+
+        .footer>div {
+            background-color: lightgrey;
+            text-align: center;
+            padding: 20px;
+            
+        }
+
+        @media (max-width: 480px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .footer {
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <a link="https://prozero00.github.io/web/">back</a>
+    <div class="container">
+        <div class="header"></div>
+        <div class="main">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="footer">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+
+</html>
